@@ -1,0 +1,21 @@
+import telebot
+bot = telebot.TeleBot("6873295760:AAG57OMwlq325F2vHvSEQv6ac6aC5OCjGHM")
+
+@bot.message_handler()
+
+def get_user_text(message):
+    if '@all' in message.text:
+        bot.send_message(message.chat.id, f'@Andruta20 @Old_0_man @ciel_supremacy @WhooLI @x1rr000 @xertk @medio64 @Amadeus01 @zybenko @itslissaveta @w1lsavin @pmiromanq @glickorez @tmat0rip0ula @n1lshen @carpet9999 @ruletss @rodtamer @Shkurytina @T4noclwn @ayurieva @Evakozina @dan4ik23f')
+    elif message.text=='MEN':
+        bot.send_message(message.chat.id, f'@Andruta20 @Old_0_man @WhooLI @x1rr000 @xertk @medio64 @Amadeus01 @zybenko @pmiromanq @glickorez @n1lshen @rodtamer @Shkurytina @T4noclwn @dan4ik23f')
+    elif message.text=='WOMEN':
+        bot.send_message(message.chat.id, f'@ciel_supremacy @itslissaveta @tmat0rip0ula @ruletss @Evakozina @carpet9999 @ayurieva @w1lsavin')
+    elif message.text=='man' or message.text=='woman':
+        bot.send_sticker(message.chat.id, 'CAACAgEAAxkBAAJTh2VAs_lS2B3n3q-UNxR1fbN5HdZbAAKwAgACzMfRRtZ_Smta3HMyMwQ')
+    elif 'Манилов' in message.text:
+        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAJUWmVEwCMGJRgPrPzhYUvp9CoKbdMYAAJZEgAC5pcpS-yq_tXJPXh8MwQ')
+    elif 'майн' in message.text:
+        bot.send_message(message.chat.id, 'Майнкрафт - игра богов')
+    elif 'Артем' in message.text or 'Артём' in message.text:
+        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAJTkWVA9ba96x0ZBfgpAfP1EM4bedJ0AALYDwACcJywSkeJ_MgS1MurMwQ')
+bot.polling(none_stop=True)
